@@ -27,7 +27,7 @@ module.exports = {
       createdAt: {
         type: Sequelize.DATE
       },
-      updateAt: {
+      updatedAt: {
         type: Sequelize.DATE
       }
    });
