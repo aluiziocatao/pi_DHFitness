@@ -11,7 +11,7 @@ module.exports = {
       return res.render('cp', { notFound: true });
     }
 
-    if(!bcrypt.compareSync(password, user.password)){
+    if(compareSync(password, user.password)){
       return res.render('cp', { notFound: true });
     }
 
