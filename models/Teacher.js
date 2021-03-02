@@ -2,27 +2,27 @@ module.exports = (Sequelize, DataType) => {
 
     const Teacher = Sequelize.define('Teacher', {
         id: { 
-            type: Sequelize.INTEGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
           },
           full_name: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false
           },
           email: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false
           },
           specialty: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false
           },
           createdAt: {
-            type: Sequelize.DATE
+            type: DataType.DATE
           },
           updateAt: {
-            type: Sequelize.DATE
+            type: DataType.DATE
           }
         },
     {

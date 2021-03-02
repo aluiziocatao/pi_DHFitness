@@ -2,23 +2,23 @@ module.exports = (Sequelize, DataType) => {
 
     const Plan = Sequelize.define('Plan', {
         id: {
-            type: Sequelize.INTEGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
           },
           title: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false
           },
           price: {
-            type: Sequelize.FLOAT,
+            type: DataType.FLOAT,
             allowNull: false
           },
           createdAt: {
-            type: Sequelize.DATE
+            type: DataType.DATE
           },
           updateAt: {
-            type: Sequelize.DATE
+            type: DataType.DATE
           }
         },
     {
