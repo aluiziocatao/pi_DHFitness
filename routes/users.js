@@ -6,7 +6,7 @@ const UserController = require("../controllers/UserController");
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+//router.get('/cp', UserController.cp);
 router.post('/autenticar', UserController.authenticate);
 
 module.exports = router;

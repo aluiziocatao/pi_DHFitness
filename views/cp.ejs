@@ -23,41 +23,25 @@
             </div>
 
             <div class="right_area">
-                <input type="search" name="search" id="search" placeholder="Pesquisar">
-                <a href="#"><i class="fas fa-search"></i></a>
-          
-                <span class="login_btn">
-                    Olá, Administrador 
-                </span> | 
-                <span>
-                    <a class="login-btn" href="/users/deslogar">Sair</a>
-                </span>                  
+                <span class="right_area_profile" onclick="toggle_right_area_menu();"></span>
+                <span>Usuário DH</span>
             </div>
-        </header>    
-            Content-->
 
-            <!--/Content-->
+            <div class="right_area_menu">
+                <h3>Plano Smart<br><span>Matrícula: 1945781</span></h3>
+                <ul>
+                    <li><i class="far fa-user-circle"></i><a href="#">Editar Perfil</a></li>
+                    <li><i class="fas fa-sign-out-alt"></i>><a href="#">Sair</a></li>
+                </ul>
+            </div>
+
+        </header>            
 
             <!--Menu Lateral -->
         <%- include('./partials/sidebar'); %>
 
         <!-- Conteúdo -->
-        <section class="content">
-
-            <div class="content_enter">
-                <span>Quanto maior o acesso, mais atividade!</span>
-
-                <ul>
-                    <li><i class="far fa-calendar-alt"></i>Agendamento</li>
-                    <li><i class="fas fa-wifi"></i>Wi-Fi</li>
-                    <li><i class="fas fa-hand-holding-medical"></i>DH Care</li>
-                    <li><i class="fas fa-tshirt"></i>Armário</li>
-                    <li><i class="far fa-clipboard"></i>Avaliação</li>
-                    <li><i class="far fa-clock"></i>Malhação Express</li>
-                    <li><i class="fas fa-utensils"></i>DH Light</li>
-                    <li><i class="fas fa-car-side"></i>Estacionamento</li>
-                </ul>
-            </div>
+        <section class="content"></section>
             
 
         </section>

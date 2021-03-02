@@ -1,4 +1,3 @@
-const bcrypt = require("bcrypt");
 const { User } = require("../models");
 
 module.exports = {
@@ -11,12 +10,6 @@ module.exports = {
       return res.render('cp', { notFound: true });
     }
 
-    if(compareSync(password, user.password)){
-      return res.render('cp', { notFound: true });
-    }
-
-    // removendo a propriedade password para nao criar sessao
-    // contendo a senha do usuario logado
     delete user.password;
 
     req.session.user = user;
