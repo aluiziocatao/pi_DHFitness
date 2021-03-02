@@ -29,24 +29,25 @@
             </div>
 
             <!-- Login -->
-            <div id="popup">
-                <div class="content_popup">
-                    <img src="/images/avatar_login.png">
-                    <h2>Acesso a Administradores</h2>
-                    <p>Inclusão de Alunos, Professores, Planos, etc... </p>
-                    <div class="inputLogin">
-                        <input type="email" placeholder="Entre com seu E-Mail">
+            <form action="/users/autenticar" method="POST">
+                <div id="popup">
+                    <div class="content_popup">
+                        <img src="/images/avatar_login.png">
+                        <h2>Acesso a Administradores</h2>
+                        <p>Inclusão de Alunos, Professores, Planos, etc... </p>
+                        <div class="inputLogin">
+                            <input name="email" type="email" placeholder="Entre com seu E-Mail">
+                        </div>
+                        <div class="inputLogin">
+                            <input name="password" type="password" placeholder="Entre com sua Senha">
+                        </div>
+                        <div class="inputLogin">
+                            <input type="submit" value="Entrar">
+                        </div>
                     </div>
-                    <div class="inputLogin">
-                        <input type="password" placeholder="Entre com sua Senha">
-                    </div>
-                    <div class="inputLogin">
-                        <input type="submit" value="Entrar">
-                    </div>
+                    <a class="close" onclick="popupToggle()"><img src="/images/close.png"></a>
                 </div>
-                <a class="close" onclick="popupToggle()"><img src="/images/close.png"></a>
-            </div>
-
+            </form>
         </header>
 
         <!--Menu Lateral -->
