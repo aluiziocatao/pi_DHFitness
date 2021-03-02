@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Teste</h1>
-</body>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <title>DH Fitness</title>
+    </head>
+
+    <body> 
+
+        <input type="checkbox" checked id="check">
+
+        <header>
+            
+            <label for="check">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+
+            <div class="left_area">
+                <h3>DH <span>Fitness</span></h3>
+            </div>
+
+            <div class="right_area">
+                <input type="search" name="search" id="search" placeholder="Pesquisar">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <% if (typeof user !== "undefined") { %>
+                <span class="login_btn">
+                    Olá, <%= user.full_name %> 
+                </span> | 
+                <span>
+                    <a class="login-btn" href="/usuario/deslogar">Sair</a>
+                </span>  
+                <% } else { %> 
+                <span onclick="popupToggle()" class="login_btn">
+                    Entrar
+                </span> | 
+                <span class="register_btn">
+                    Cadastrar
+                </span>
+            </div>
+        </header>    
+            Content-->
+
+            <!--/Content-->
+
+            <!--Menu Lateral -->
+        <%- include('./partials/sidebar'); %>
+
+        <!-- Conteúdo -->
+        <section class="content">
+
+            <div class="content_enter">
+                <span>Quanto maior o acesso, mais atividade!</span>
+
+                <ul>
+                    <li><i class="far fa-calendar-alt"></i>Agendamento</li>
+                    <li><i class="fas fa-wifi"></i>Wi-Fi</li>
+                    <li><i class="fas fa-hand-holding-medical"></i>DH Care</li>
+                    <li><i class="fas fa-tshirt"></i>Armário</li>
+                    <li><i class="far fa-clipboard"></i>Avaliação</li>
+                    <li><i class="far fa-clock"></i>Malhação Express</li>
+                    <li><i class="fas fa-utensils"></i>DH Light</li>
+                    <li><i class="fas fa-car-side"></i>Estacionamento</li>
+                </ul>
+            </div>
+            
+
+        </section>
+
+        <!-- Sobre -->
+        <section class="about" id="about">
+            <div class="about_text">
+                <h1>A DH Fitness</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eum libero tempore dolore nihil qui magnam necessitatibus, velit aspernatur natus unde nemo, provident expedita fuga enim consectetur delectus autem incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eum libero tempore dolore nihil qui magnam necessitatibus, velit aspernatur natus unde nemo, provident expedita fuga enim consectetur delectus autem incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eum libero tempore dolore nihil qui magnam necessitatibus, velit aspernatur natus unde nemo, provident expedita fuga enim consectetur delectus autem incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eum libero tempore dolore nihil qui magnam necessitatibus, velit aspernatur natus unde nemo, provident expedita fuga enim consectetur delectus autem incidunt?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eum libero tempore dolore nihil qui magnam necessitatibus, velit aspernatur natus unde nemo, provident expedita fuga enim consectetur delectus autem incidunt?</p>
+            </div>
+            
+        </section>
+
+        <!-- Unidades -->
+        <section class="unity" id="unity">
+
+        </section>
+
+        <!-- Planos -->
+        <%- include('./partials/plans'); %>
+        
+
+        <!-- Rodapé -->
+        <%- include('./partials/footer'); %> 
+
+
+        <script>
+            function popupToggle() {
+                const popup = document.getElementById('popup');
+                popup.classList.toggle('active_popup');
+            }
+        </script>
+        
+    </body>
+
 </html>
