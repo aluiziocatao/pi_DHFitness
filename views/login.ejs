@@ -25,20 +25,13 @@
             <div class="right_area">
                 <input type="search" name="search" id="search" placeholder="Pesquisar">
                 <a href="#"><i class="fas fa-search"></i></a>
-                <% if (typeof user !== "undefined") { %>
+          
                 <span class="login_btn">
-                    Olá, <%= user.full_name %> 
+                    Olá, Administrador 
                 </span> | 
                 <span>
                     <a class="login-btn" href="/usuario/deslogar">Sair</a>
-                </span>  
-                <% } else { %> 
-                <span onclick="popupToggle()" class="login_btn">
-                    Entrar
-                </span> | 
-                <span class="register_btn">
-                    Cadastrar
-                </span>
+                </span>                  
             </div>
         </header>    
             Content-->
